@@ -10,6 +10,7 @@ import {
 export default [
   layout("./layouts/app-layout.tsx", [
       index("./pages/home.tsx"),
-      route("about", "./pages/about.tsx")
+      route("about", "./pages/about.tsx"),
+      route("staff", "./pages/staff.tsx")
   ]),
 ] satisfies RouteConfig

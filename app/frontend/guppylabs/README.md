@@ -11,7 +11,7 @@ This is the webpage for the CS4800 Group Project
 
 
 
-## React + TypeScript + Vite
+### React + TypeScript + Vite
 
   1. To install the dependencies you must run: 
     `npm install`

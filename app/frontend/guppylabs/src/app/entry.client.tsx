@@ -9,3 +9,4 @@ ReactDOM.hydrateRoot(
     <HydratedRouter />
   </React.StrictMode>,
 );
+

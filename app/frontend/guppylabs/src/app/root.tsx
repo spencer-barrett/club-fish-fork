@@ -5,6 +5,10 @@ import {
     Scripts,
     ScrollRestoration,
   } from "react-router";
+
+  import {HeroUIProvider} from '@heroui/react';
+  import {ThemeProvider as NextThemesProvider} from "next-themes";
+
   
   export function Layout({
     children,
@@ -33,6 +37,16 @@ import {
   }
   
   export default function Root() {
-    return <Outlet />;
+    return (
+
+      <HeroUIProvider>
+        <NextThemesProvider attribute="class" defaultTheme="dark">
+
+        
+    <Outlet />
+    </NextThemesProvider>
+    </HeroUIProvider>
+  
+  );
   }
   

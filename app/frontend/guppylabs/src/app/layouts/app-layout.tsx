@@ -1,12 +1,12 @@
 import { Outlet } from "react-router";
-import Navbar from "../../components/navbar.tsx";
+import NavigationBar from "../../components/navbar.tsx";
 import Footer from "../../components/footer.tsx";
 export default function AppLayout() {
   return (
-    <div className="h-full flex flex-col">
-      <Navbar/>
+    <div className="min-h-svh flex flex-col">
+      <NavigationBar/>
       {/* <nav></nav> */}
-      <main className="flex h-full">
+      <main className="flex min-h-[calc(100svh-4rem)] h-full">
 
       
       <Outlet />

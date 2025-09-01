@@ -21,6 +21,9 @@ export default function Home() {
           </CardFooter>
         </Card> */}
       </section>
+      <section className="flec h-1/2 bg-red-400">
+
+      </section>
     </div>
   );
 }

@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import '@fontsource/poppins/400.css';
+@import '@fontsource/poppins/800.css';
 @plugin './hero.ts';
 @config "../tailwind.config.js";
 /* Note: You may need to change the path to fit your project structure */
@@ -7,4 +9,5 @@
 
 html, body {
   height: 100%;
+  font-family: 'Poppins', sans-serif;
 }

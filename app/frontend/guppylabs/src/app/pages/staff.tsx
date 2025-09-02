@@ -1,8 +1,9 @@
-import { Avatar, Card, CardBody, CardHeader } from "@heroui/react";
+import { Avatar, Card, CardBody, CardHeader, Divider } from "@heroui/react";
+import spencerAvatar from "../../assets/spencer_avatar.jpg";
 
 export default function Staff() {
   const staff = [
-    { role: "Developer/TBD", name: "Spencer" },
+    { role: "Developer/TBD", name: "Spencer", avatar: spencerAvatar },
     { role: "Developer/TBD", name: "Tony" },
     { role: "Developer/TBD", name: "Joshua" },
     { role: "Developer/TBD", name: "Ethan" },
@@ -15,11 +16,12 @@ export default function Staff() {
           Meet our <span className="font-bold">Team</span>
         </span>
         <div className="sm:grid sm:grid-rows-2 flex flex-col w-full h-full mt-12 ">
-          <div className="flex justify-center">
-            <Card className="sm:w-[20svw] w-[55svw] h-[30vh] sm:h-auto flex justify-center">
+          <div className="flex justify-center ">
+            <Card className="sm:w-[20svw] w-[55svw] h-[25vh] sm:h-auto flex justify-center px-4">
               <CardHeader className="flex justify-center">
                 <Avatar className="h-24 w-24" name="Michael" />
               </CardHeader>
+              <Divider className="my-4" />
               <CardBody className="text-center">CEO</CardBody>
             </Card>
           </div>
@@ -27,10 +29,15 @@ export default function Staff() {
             <div className="sm:grid sm:grid-cols-4  flex flex-col sm:gap-1 gap-2 w-full h-full">
               {staff.map((s) => (
                 <div className="flex justify-center">
-                  <Card className="sm:w-[20svw] w-[55svw] h-[30vh] sm:h-auto flex justify-center">
+                  <Card className="sm:w-[20svw] w-[55svw] h-[25vh] sm:h-auto flex justify-center px-4">
                     <CardHeader className="flex justify-center">
-                      <Avatar className="h-24 w-24" name={s.name} />
+                      <Avatar
+                        className="h-24 w-24"
+                        name={s.name}
+                        src={s.avatar}
+                      />
                     </CardHeader>
+                    <Divider className="my-4" />
                     <CardBody className="text-center">{s.role}</CardBody>
                   </Card>
                 </div>

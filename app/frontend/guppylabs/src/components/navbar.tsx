@@ -10,7 +10,7 @@ import {
 } from "@heroui/react";
 import { Link } from "@heroui/react";
 import React from "react";
-import { Link as RouterLink } from "react-router";
+import { Link as RouterLink, useLocation } from "react-router";
 import GuppyIcon from "../assets/guppy.svg?react";
 import {useTheme} from "next-themes";
 import {useEffect, useState} from "react";
@@ -23,9 +23,16 @@ export default function NavigationBar() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme} = useTheme();
 
+  const location = useLocation();
+
   useEffect(() => {
     setMounted(true)
   }, []);
+
+
+    useEffect(() => {
+    setIsMenuOpen(false)
+  }, [location]);
 
   if (!mounted) return null;
 
@@ -38,7 +45,7 @@ export default function NavigationBar() {
   ];
 
   return (
-    <Navbar shouldHideOnScroll onMenuOpenChange={setIsMenuOpen} className="">
+    <Navbar shouldHideOnScroll onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen}   className="bg-primary/70 dark:bg-primary/60">
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -96,6 +103,7 @@ export default function NavigationBar() {
               as={RouterLink}
               to={item.to}
               size="lg"
+              onClick={() => setIsMenuOpen(false)}
             >
               {item.label}
             </Link>

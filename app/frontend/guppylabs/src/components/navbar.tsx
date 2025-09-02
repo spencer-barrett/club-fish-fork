@@ -44,8 +44,12 @@ export default function NavigationBar() {
     { label: "Staff", to: "/staff" },
   ];
 
+const pathName = location.pathname;
+  console.log(pathName);
+
   return (
-    <Navbar shouldHideOnScroll onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen}   className="bg-primary/70 dark:bg-primary/60">
+    <>
+    <Navbar shouldHideOnScroll onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen} isBlurred={false}  className={`bg-transparent fixed top-0 left-0 z-[500]`}>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -57,10 +61,10 @@ export default function NavigationBar() {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden sm:flex gap-12" justify="center">
         {pages.map((p) => (
           <NavbarItem>
-            <Link color="foreground" as={RouterLink} to={p.to}>
+            <Link color="foreground" as={RouterLink} to={p.to} className="text-lg">
               {p.label}
             </Link>
           </NavbarItem>
@@ -94,7 +98,7 @@ export default function NavigationBar() {
           </Button>
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu>
+      <NavbarMenu className="z-500">
         {pages.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
@@ -111,5 +115,8 @@ export default function NavigationBar() {
         ))}
       </NavbarMenu>
     </Navbar>
+    <div className={`${pathName === "/" ? "" : "mb-[4rem]"}`}/>
+
+    </>
   );
 }

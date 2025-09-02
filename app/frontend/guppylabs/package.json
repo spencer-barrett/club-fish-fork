@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/poppins": "^5.2.6",
     "@fontsource/roboto": "^5.2.6",
     "@heroui/react": "2.8.3",
     "@heroui/system": "2.4.21",

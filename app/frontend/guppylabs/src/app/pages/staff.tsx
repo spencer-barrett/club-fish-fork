@@ -10,42 +10,41 @@ export default function Staff() {
   ];
 
   return (
-    <main className="w-full flex border-t-1 border-foreground-200 mb-6">
+    <main className="w-full flex border-t-1 border-foreground-200 mb-6 min-h-svh">
       <div className="flex flex-col items-center w-full mt-6">
         <span className="text-xl">
           Meet our <span className="font-bold">Team</span>
         </span>
-        <div className="sm:grid sm:grid-rows-2 flex flex-col w-full h-full mt-12 ">
-          <div className="flex justify-center ">
-            <Card className="sm:w-[20svw] w-[55svw] h-[25vh] sm:h-auto flex justify-center px-4">
-              <CardHeader className="flex justify-center">
-                <Avatar className="h-24 w-24" name="Michael" />
-              </CardHeader>
-              <Divider className="my-4" />
-              <CardBody className="text-center">CEO</CardBody>
-            </Card>
-          </div>
-          <div className="flex justify-center items-start sm:mt-6 mt-2">
-            <div className="sm:grid sm:grid-cols-4  flex flex-col sm:gap-1 gap-2 w-full h-full">
+
+          <div className="mt-8 flex justify-center">
+          <Card className="aspect-square w-36 sm:w-40 md:w-48 p-4 flex flex-col items-center">
+            <CardHeader className="justify-center p-0">
+              <Avatar className="h-14 w-14 sm:h-16 sm:w-16" name="Michael" />
+            </CardHeader>
+            <Divider className="my-3" />
+            <CardBody className="p-0 text-center text-sm">CEO</CardBody>
+          </Card>
+        </div>
+
+            <div className="mt-8 grid place-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-5">
               {staff.map((s) => (
-                <div className="flex justify-center">
-                  <Card className="sm:w-[20svw] w-[55svw] h-[25vh] sm:h-auto flex justify-center px-4">
-                    <CardHeader className="flex justify-center">
+                <div className="flex items-center justify-center">
+                  <Card className="aspect-square w-[44vw] sm:w-40 md:w-48 lg:w-56 p-4 flex flex-col items-center">
+                    <CardHeader className="justify-center p-0">
                       <Avatar
-                        className="h-24 w-24"
+                        className="h-14 w-14 sm:h-16 sm:w-16"
                         name={s.name}
                         src={s.avatar}
                       />
                     </CardHeader>
-                    <Divider className="my-4" />
-                    <CardBody className="text-center">{s.role}</CardBody>
+                    <Divider className="my-3 sm:my-2" />
+                    <CardBody className="p-0 text-center text-sm sm:text-xs">{s.role}</CardBody>
                   </Card>
                 </div>
               ))}
-            </div>
+
           </div>
         </div>
-      </div>
     </main>
   );
 }

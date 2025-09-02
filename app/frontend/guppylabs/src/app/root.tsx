@@ -18,6 +18,7 @@ import {
     return (
       <html lang="en">
         <head>
+          
           <meta charSet="UTF-8" />
           <meta
             name="viewport"

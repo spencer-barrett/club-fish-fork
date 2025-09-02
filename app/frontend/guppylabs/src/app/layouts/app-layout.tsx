@@ -6,7 +6,7 @@ export default function AppLayout() {
     <div className="min-h-svh flex flex-col">
       <NavigationBar/>
       {/* <nav></nav> */}
-      <main className="flex min-h-[calc(100svh-4rem)] h-full">
+      <main className="flex flex-1">
 
       
       <Outlet />

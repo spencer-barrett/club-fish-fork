@@ -23,7 +23,7 @@ export default {
           colors: {
             background: "#ffffff",
             foreground: "#000000",
-            primary: { DEFAULT: "#0ea5e9", foreground: "#ffffff" },
+            primary: { DEFAULT: "#52c8ffff", foreground: "#ffffff" },
           },
         },
         dark: {

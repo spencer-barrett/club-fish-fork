@@ -10,7 +10,7 @@ export default function Staff() {
   ];
 
   return (
-    <main className="w-full flex border-t-1 border-foreground-200 mb-6">
+    <div className="w-full flex border-t-1 border-foreground-200 mb-6">
       <div className="flex flex-col items-center w-full mt-6">
         <span className="text-xl md:mt-12">
           Meet our <span className="font-bold">Team</span>
@@ -55,6 +55,6 @@ export default function Staff() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

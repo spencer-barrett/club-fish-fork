@@ -15,7 +15,7 @@ export default function Staff() {
         <span className="text-xl md:mt-12">
           Meet our <span className="font-bold">Team</span>
         </span>
-        <div className="flex flex-col items-center justify-center md:h-3/4">
+        <div className="flex flex-col items-center justify-center md:h-3/4 sm:mt-6 md:mt-12">
 
 
           <div className="mt-8 md:mt-1 flex justify-center ">

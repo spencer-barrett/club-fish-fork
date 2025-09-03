@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "react-router dev",
+    "prebuild": "node -e \"console.log('USING RR BUILD SCRIPT')\"",
     "build": "react-router build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -34,6 +35,7 @@
     "@tailwindcss/postcss": "^4.1.12",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
+    "@vercel/react-router": "^1.2.3",
     "@vitejs/plugin-react-swc": "^4.0.0",
     "eslint": "^9.33.0",
     "eslint-plugin-react-hooks": "^5.2.0",

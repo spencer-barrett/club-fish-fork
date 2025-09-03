@@ -25,7 +25,7 @@ export default function Staff() {
               </CardHeader>
               <Divider className="mt-6" />
               <CardBody className="p-0 text-center text-sm sm:text-xs flex justify-center items-center">
-                <p className="md:text-lg text-md font-bold">Michael</p>
+                <p className="md:text-lg text-md font-bold">Michael Kaitel</p>
                 <p className="md:text-xs text-xs text-foreground/80 mt-2">CEO</p>
               </CardBody>
             </Card>

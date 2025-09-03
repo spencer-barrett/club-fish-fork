@@ -1,11 +1,11 @@
-import { Divider } from "@heroui/react";
+import { Card, CardBody, CardHeader, Divider } from "@heroui/react";
 import hero from "../../assets/about-banner.jpg"
 import { FaReact, FaNode } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 
 export default function About() {
   return (
-    <div className="w-full flex mb-6">
+    <div className="w-full flex mb-12">
       <div className="flex w-full">
         <article className="flex flex-col w-full">
           <div className="relative w-full pb-12 bg-cover bg-center" style={{ backgroundImage: `url(${hero})` }}>
@@ -19,7 +19,7 @@ export default function About() {
               </p>
             </div>
           </div>
-          <div className="md:mx-24 mx-12 md:mt-12 mt-6">
+          <div className="md:mx-24 mx-12 md:mt-12 mt-6 flex flex-col items-center">
             <p className="md:text-4xl text-lg">
               Founded in 2025, GuppyLabs is a young ambitous company. We are working on creating an innovative social media platform.
               
@@ -30,8 +30,17 @@ export default function About() {
               for the online community.
             </p>
             <Divider className="md:mt-12 mt-6"/>
-            <p className="md:mt-12 mt-6 md:text-2xl text-xl">Our Stack</p>
-            <div className="flex md:mt-12 mt-6 gap-8"><FaReact size={30}/><SiTypescript size={30}/><FaNode size={30}/></div>
+            <Card className="md:mt-12 mt-6 w-fit p-6">
+              <CardHeader className=" flex items-center justify-center">
+                <p className="md:text-2xl text-2xl border-b-1 border-foreground/20 pb-2 font-[800]">Our <span className=" ">current </span>stack</p>
+
+              </CardHeader>
+              <CardBody className="flex flex-row gap-8 flex items-center justify-center">
+                <FaReact size={30} color="#29cfb4ff"/><SiTypescript size={30} color="#29cfb4ff"/><FaNode size={30} color="#29cfb4ff"/>
+              </CardBody>
+            </Card>
+            {/* <p className="md:mt-12 mt-6 md:text-2xl text-xl w-fit border-b-1 border-foreground/20 pb-2">Our current stack</p>
+            <div className="flex md:mt-12 mt-6 gap-8"><FaReact size={30}/><SiTypescript size={30}/><FaNode size={30}/></div> */}
           </div>
         </article>
       </div>

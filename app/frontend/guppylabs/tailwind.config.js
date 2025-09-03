@@ -16,21 +16,21 @@ export default {
  plugins: [
     heroui({
       // prefix: "heroui",            // only if you really need to namespace CSS vars
-      // addCommonColors: true,       // default is fine
+      // addCommonColors: true,       // default is fine #52c8ffff  #38bdf8
       defaultTheme: "dark",
       themes: {
         light: {
           colors: {
             background: "#ffffff",
             foreground: "#000000",
-            primary: { DEFAULT: "#52c8ffff", foreground: "#ffffff" },
+            primary: { DEFAULT: "#29cfb4ff", foreground: "#ffffff" },
           },
         },
         dark: {
           colors: {
             background: "#121212",
             foreground: "#ECEDEE",
-            primary: { DEFAULT: "#38bdf8", foreground: "#11181C" },
+            primary: { DEFAULT: "#29cfb4ff", foreground: "#11181C" },
           },
         },
       },

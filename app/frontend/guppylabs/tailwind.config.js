@@ -17,7 +17,7 @@ export default {
     heroui({
       // prefix: "heroui",            // only if you really need to namespace CSS vars
       // addCommonColors: true,       // default is fine
-      defaultTheme: "light",
+      defaultTheme: "dark",
       themes: {
         light: {
           colors: {

@@ -1,0 +1,10 @@
+node_modules
+
+.react-router
+
+dist
+
+.vscode/*
+logs
+*.logs
+npm-debug.log*

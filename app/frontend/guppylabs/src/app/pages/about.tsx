@@ -38,7 +38,7 @@ export default function About() {
                   <p className="md:text-2xl text-2xl border-b-1 border-foreground/20 pb-2 font-[800]">Our <span className=" ">current </span>stack</p>
 
                 </CardHeader>
-                <CardBody className="flex flex-row gap-8 flex items-center justify-center">
+                <CardBody className="flex-row gap-8 flex items-center justify-center">
                   <FaReact size={30} color="#29cfb4ff" /><SiTypescript size={30} color="#29cfb4ff" /><FaNode size={30} color="#29cfb4ff" />
                 </CardBody>
               </Card>

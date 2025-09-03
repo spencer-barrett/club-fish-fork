@@ -19,28 +19,32 @@ export default function About() {
               </p>
             </div>
           </div>
-          <div className="md:mx-24 mx-12 md:mt-12 mt-6 flex flex-col items-center">
+          <div className="md:mx-24 mx-12 md:mt-12 mt-6 flex flex-col">
             <p className="md:text-4xl text-lg">
               Founded in 2025, GuppyLabs is a young ambitous company. We are working on creating an innovative social media platform.
-              
-              
+
+
             </p>
             <p className="md:text-4xl text-lg mt-6 md:mt-12">
-              We're in the early stages of development, and while our vision is still evolving, our goal is to build something fresh, useful, and enjoyable 
+              We're in the early stages of development, and while our vision is still evolving, our goal is to build something fresh, useful, and enjoyable
               for the online community.
             </p>
-            <Divider className="md:mt-12 mt-6"/>
-            <Card className="md:mt-12 mt-6 w-fit p-6">
-              <CardHeader className=" flex items-center justify-center">
-                <p className="md:text-2xl text-2xl border-b-1 border-foreground/20 pb-2 font-[800]">Our <span className=" ">current </span>stack</p>
+            <Divider className="md:mt-12 mt-6" />
+            <div className="w-full flex items-center justify-center">
 
-              </CardHeader>
-              <CardBody className="flex flex-row gap-8 flex items-center justify-center">
-                <FaReact size={30} color="#29cfb4ff"/><SiTypescript size={30} color="#29cfb4ff"/><FaNode size={30} color="#29cfb4ff"/>
-              </CardBody>
-            </Card>
-            {/* <p className="md:mt-12 mt-6 md:text-2xl text-xl w-fit border-b-1 border-foreground/20 pb-2">Our current stack</p>
-            <div className="flex md:mt-12 mt-6 gap-8"><FaReact size={30}/><SiTypescript size={30}/><FaNode size={30}/></div> */}
+
+              <Card className="md:mt-12 mt-6 w-fit p-6">
+                <CardHeader className=" flex items-center justify-center">
+                  <p className="md:text-2xl text-2xl border-b-1 border-foreground/20 pb-2 font-[800]">Our <span className=" ">current </span>stack</p>
+
+                </CardHeader>
+                <CardBody className="flex flex-row gap-8 flex items-center justify-center">
+                  <FaReact size={30} color="#29cfb4ff" /><SiTypescript size={30} color="#29cfb4ff" /><FaNode size={30} color="#29cfb4ff" />
+                </CardBody>
+              </Card>
+            </div>
+
+
           </div>
         </article>
       </div>

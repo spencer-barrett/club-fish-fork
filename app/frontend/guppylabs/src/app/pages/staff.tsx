@@ -21,7 +21,7 @@ export default function Staff() {
           <div className="mt-8 md:mt-1 flex justify-center ">
             <Card className="aspect-square w-[44vw] sm:w-40 md:w-48 lg:w-56 p-4 flex flex-col items-center">
               <CardHeader className="justify-center p-0">
-                <Avatar className="h-16 w-16 sm:h-25 sm:w-25" name="Michael" />
+                <Avatar className="h-16 w-16 lg:h-25 lg:w-25" name="Michael" />
               </CardHeader>
               <Divider className="mt-6" />
               <CardBody className="p-0 text-center text-sm sm:text-xs flex justify-center items-center">
@@ -37,7 +37,7 @@ export default function Staff() {
                 <Card className="aspect-square w-[44vw] sm:w-40 md:w-48 lg:w-56 p-4 flex flex-col items-center">
                   <CardHeader className="justify-center p-0">
                     <Avatar
-                      className="h-16 w-16 sm:h-25 sm:w-25"
+                      className="h-16 w-16  lg:h-25 lg:w-25"
                       name={s.name}
                       src={s.avatar}
                     />

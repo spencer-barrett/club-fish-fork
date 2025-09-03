@@ -17,7 +17,6 @@ export default function Home() {
           <Button className="p-4 text-foreground font-bold" radius="full" color="primary">Learn More</Button>
         </div>
       </section>
-      <section className="flex sm:h-svh h-svh bg-red-400"></section>
     </div>
   );
 }

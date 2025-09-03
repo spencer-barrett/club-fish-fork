@@ -1,8 +1,8 @@
-import { Card, CardBody, CardHeader, Skeleton } from "@heroui/react";
+import { Card, CardBody, CardHeader, Divider, Skeleton } from "@heroui/react";
 
 export default function Projects() {
   return (
-    <div className="border-t-1 border-foreground-100 w-full items-center flex flex-col mx-12 md:mx-24">
+    <div className="border-t-1 border-foreground-100 w-full items-center flex flex-col mx-12 md:mx-24 mb-6 md:mb-12">
       <div className="text-center mt-6 sm:mt-12 font-[800] text-lg sm:text-3xl border-b-1 border-foreground-100 pb-6">
         Projects we are currently building
       </div>
@@ -11,6 +11,9 @@ export default function Projects() {
           <CardHeader className="text-sm px-6 md:px-12">
             Undisclosed Social Media Application
           </CardHeader>
+          <div className="px-3">
+            <Divider />
+          </div>
           <CardBody>
             <Skeleton className="rounded-lg">
               <div className="h-32 rounded-lg" />

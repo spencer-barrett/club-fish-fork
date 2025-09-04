@@ -1,9 +1,17 @@
-import { Accordion, AccordionItem, Link } from "@heroui/react";
+import {
+  Accordion,
+  AccordionItem,
+  Link,
+
+} from "@heroui/react";
 import GuppyIcon from "../assets/guppy.svg?react";
 import { Link as RouterLink } from "react-router";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+
+  // const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
   return (
     <>
       <footer className="max-w-svw w-full border-t-1 border-foreground-200 px-6 sm:px-2 ">
@@ -56,14 +64,13 @@ export default function Footer() {
             <Accordion selectionMode="multiple" className="sm:hidden">
               <AccordionItem key="1" aria-label="About Us" title="About Us">
                 <div className="">
-                <Link
-                  as={RouterLink}
-                  to={"#"}
-                  className="text-xs mt-2"
-                  color="foreground"
-                >
-                  Contact Us
-                </Link>
+                  <Link
+    
+                    className="text-xs mt-2"
+                    color="foreground"
+                  >
+                    Contact Us
+                  </Link>
                 </div>
               </AccordionItem>
               <AccordionItem key="2" aria-label="Resources" title="Resources">
@@ -89,6 +96,22 @@ export default function Footer() {
             </Accordion>
           </section>
         </div>
+
+        {/* // TODO: CONTACT US MODAL */}
+        {/* <Modal isOpen={isOpen} onOpenChange={onOpenChange} className="z-[350]">
+          <ModalContent className="z-[350]">
+            {(onClose) => (
+              <>
+                <ModalBody>Contact Us</ModalBody>
+                <ModalFooter>
+                  <Button color="danger" variant="light" onPress={onClose}>
+                    Close
+                  </Button>
+                </ModalFooter>
+              </>
+            )}
+          </ModalContent>
+        </Modal> */}
       </footer>
     </>
   );

@@ -42,6 +42,7 @@ export default function NavigationBar() {
     { label: "Home", to: "/" },
     { label: "About", to: "/about" },
     { label: "Staff", to: "/staff" },
+    { label: "Projects", to: "/projects"}
   ];
 
 const pathName = location.pathname;

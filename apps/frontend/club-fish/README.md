@@ -8,13 +8,13 @@ A minimal Next.js project using the App Router, TypeScript, and Tailwind-ready c
 
 ## Getting Started
 
-Clone the repo, then install and run:
 
 1) Install Deps
 ` npm install `
 
-2) Start the development server at http://localhost:3000
-`npm run dev`
+2) Start the development server `npm run dev`
+
+3) Navigate to http://localhost:3000
 
 ## Project Structure
 ![alt text](image.png)

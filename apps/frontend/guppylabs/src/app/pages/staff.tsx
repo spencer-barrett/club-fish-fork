@@ -1,11 +1,12 @@
 import { Avatar, Card, CardBody, CardHeader, Divider } from "@heroui/react";
 import spencerAvatar from "../../assets/spencer_avatar.jpg";
+import joshAvatar from "../../assets/josh_avatar.jpg";
 
 export default function Staff() {
   const staff = [
     { role: "Developer/TBD", name: "Spencer Barrett", avatar: spencerAvatar },
     { role: "Developer/TBD", name: "Tony Mazich" },
-    { role: "Developer/TBD", name: "Joshua Chia" },
+    { role: "Developer/TBD", name: "Joshua Chia", avatar: joshAvatar },
     { role: "Developer/TBD", name: "Ethan Juniper" },
   ];
 

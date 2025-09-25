@@ -5,4 +5,7 @@ export default {
   appDirectory: "./src/app",
   ssr: false,
   presets: [vercelPreset()],
+  async prerender() {
+    return ["/", "/about", "/staff", "/projects"];
+  }
 } satisfies Config;

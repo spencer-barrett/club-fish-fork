@@ -24,14 +24,11 @@ export default function Home() {
   
   async function handleClick() {
     // const names = ["rooms", "users", "friendRequests"] as const;
-    const names = ["peopleTemp"] as const;
     setDisplay(true);
     setLoading(true);
 
     try {
-      const snaps = await Promise.all(
-        names.map((name) => getDocs(collection(db, name)))
-      );
+          const snaps = await Promise.all(names.map((name) => getDocs(getTypedCol(name))));
       const merged: ResultMap = Object.fromEntries(
       snaps.map((snap, i) => [
         names[i],

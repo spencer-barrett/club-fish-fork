@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { db } from "../lib/firebase/clientApp";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, type CollectionReference } from "firebase/firestore";
 import { Loader2 } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Separator } from "@radix-ui/react-separator";
@@ -12,7 +12,8 @@ import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
 export default function Home() {
   type Person = {id: string, firstName: string, lastName: string, profileImg: string, UID: string};
-  const [result, setResult] = useState<Record<string, Person[]>>({});
+  type ResultMap = Record<string, Person[]>;
+  const [result, setResult] = useState<ResultMap>({});
   const [display, setDisplay] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
   async function handleClick() {

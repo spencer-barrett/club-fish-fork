@@ -13,6 +13,7 @@ import { Avatar, AvatarImage } from "@/components/ui/avatar";
 export default function Home() {
   type Person = {id: string, firstName: string, lastName: string, profileImg: string, UID: string};
   type ResultMap = Record<string, Person[]>;
+  const names = ["peopleTemp"] as const;
   const [result, setResult] = useState<ResultMap>({});
   const [display, setDisplay] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);

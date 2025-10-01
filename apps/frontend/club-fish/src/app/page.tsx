@@ -16,6 +16,11 @@ export default function Home() {
   const [result, setResult] = useState<ResultMap>({});
   const [display, setDisplay] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
+
+  const getTypedCol = (name: typeof names[number]) =>
+  collection(db, name) as CollectionReference<Omit<Person, "id">>;
+
+  
   async function handleClick() {
     // const names = ["rooms", "users", "friendRequests"] as const;
     const names = ["peopleTemp"] as const;
@@ -26,12 +31,12 @@ export default function Home() {
       const snaps = await Promise.all(
         names.map((name) => getDocs(collection(db, name)))
       );
-      const merged = Object.fromEntries(
-        snaps.map((snap, i) => [
-          names[i],
-          snap.docs.map((d) => ({ id: d.id, ...d.data() })),
-        ])
-      );
+      const merged: ResultMap = Object.fromEntries(
+      snaps.map((snap, i) => [
+        names[i],
+        snap.docs.map((d) => ({ id: d.id, ...d.data() } as Person)),
+      ])
+    );
       setResult(merged);
     } finally {
       setLoading(false);

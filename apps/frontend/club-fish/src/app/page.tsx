@@ -11,7 +11,7 @@ import { azurePublicUrl } from "@/lib/azure/getBlob";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
 export default function Home() {
-  const [result, setResult] = useState<Record<string, any[]>>({});
+  const [result, setResult] = useState<Record<string, unknown[]>>({});
   const [display, setDisplay] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
   async function handleClick() {
